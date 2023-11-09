@@ -11,6 +11,16 @@
     <hr>
     <p>{{article.content}}</p>
 
+    <form action="" method ="POST">
+        {{form}}
+        <input type="submit">
+    </form>
 
+    <hr>
+
+    {% for comment in article.commnet_set.all %}
+        <p>{{comment.user}} : {{comment.content}}</p>
+
+    {% endfor %}
 
 {% endblock %}
